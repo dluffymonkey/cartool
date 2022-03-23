@@ -82,9 +82,9 @@ void CGImageWriteToFile(CGImageRef image, NSString *path)
 	
 	if (!CGImageDestinationFinalize(destination)) {
 		NSLog(@"Failed to write image to %@", path);
-	}
-	
-	CFRelease(destination);
+    } else {
+        CFRelease(destination);
+    }
 }
 
 NSString *idiomSuffixForCoreThemeIdiom(kCoreThemeIdiom idiom)
