@@ -11,6 +11,8 @@
 		B06C818E17934BA30082BD37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B06C818D17934BA30082BD37 /* main.m */; };
 		B06C819217934BA30082BD37 /* cartool.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B06C819117934BA30082BD37 /* cartool.1 */; };
 		B06C819917934BCC0082BD37 /* CoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06C819817934BCC0082BD37 /* CoreUI.framework */; };
+		D133794B27EAD2E000101EC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D133794A27EAD2E000101EC5 /* CoreGraphics.framework */; };
+		D133794D27EAD7C900101EC5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D133794C27EAD7C900101EC5 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +35,8 @@
 		B06C819017934BA30082BD37 /* cartool-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cartool-Prefix.pch"; sourceTree = "<group>"; };
 		B06C819117934BA30082BD37 /* cartool.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = cartool.1; sourceTree = "<group>"; };
 		B06C819817934BCC0082BD37 /* CoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreUI.framework; path = ../../../../../../System/Library/PrivateFrameworks/CoreUI.framework; sourceTree = "<group>"; };
+		D133794A27EAD2E000101EC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D133794C27EAD7C900101EC5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D133794D27EAD7C900101EC5 /* ImageIO.framework in Frameworks */,
+				D133794B27EAD2E000101EC5 /* CoreGraphics.framework in Frameworks */,
 				B06C819917934BCC0082BD37 /* CoreUI.framework in Frameworks */,
 				B06C818B17934BA30082BD37 /* Foundation.framework in Frameworks */,
 			);
@@ -68,6 +74,8 @@
 		B06C818917934BA30082BD37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D133794C27EAD7C900101EC5 /* ImageIO.framework */,
+				D133794A27EAD2E000101EC5 /* CoreGraphics.framework */,
 				B06C819817934BCC0082BD37 /* CoreUI.framework */,
 				B06C818A17934BA30082BD37 /* Foundation.framework */,
 			);
@@ -126,6 +134,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B06C817E17934BA30082BD37;
@@ -188,7 +197,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -226,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -238,8 +247,10 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cartool/cartool-Prefix.pch";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +262,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
 				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cartool/cartool-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
